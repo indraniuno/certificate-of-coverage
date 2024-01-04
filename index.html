@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A4-sized Document</title>
+    <style>
+        @font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue'), url('./Helvetica-Font/Helvetica.ttf') format('woff');
+    font-weight: 55;
+    font-style: normal;
+}
+
+        body {
+            width: 210mm;
+            /* A4 width */
+            height: 297mm;
+            /* A4 height */
+            font-family: 'Helvetica Neue', sans-serif;
+            color: white;
+            transform: scaleY(1.1);
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto auto auto auto auto auto;
+            grid-template-areas:
+                "heading"
+                "container2"
+                "heading2"
+                "container3"
+                "image"
+                "container3"
+                "container3"
+                "container3"
+                "container3";
+
+        }
+
+        .rhombus-container {
+            margin: 0;
+            position: relative;
+            width: 50%; 
+            height: 40vh; 
+            overflow: hidden;
+        }
+
+        .skew-wrapper {
+            width: 100%;
+            height: 100%;
+            transform: skew(0, 345deg); 
+            overflow: hidden;
+        }
+
+        .rhombus {
+            width: 200%; 
+            height: 100%;
+            background-color: #c01e1b;
+            border-bottom-right-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            color: #fff;
+            line-height: 100vh;
+            font-family: 'Helvetica Neue LT', Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            transform: skew(0, 15deg);
+        }
+        .heading {
+            grid-area: heading;
+            background-color: #c01e1b;
+            padding: 10px;
+            font-family: 'Helvetica Neue LT', Arial, Helvetica, sans-serif;
+            color: white;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .heading2 {
+            grid-area: heading2;
+            color: #c01e1b;
+            margin-top: 10px;
+            font-size: 9.5px;
+            font-weight: 800;
+        }
+
+        .para {
+            color: black;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .para2 {
+            color: #c01e1b;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .container2 {
+            grid-area: container2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+
+        }
+
+
+        .container3 {
+            grid-area: container3;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            gap: 50px;
+        }
+
+        .policy-info {
+            margin-top: 20px;
+        }
+
+        .policy-info label {
+            display: block;
+            font-weight: 900;
+            margin-bottom: 5px;
+            color: #c01e1b;
+            font-size: 10px;
+        }
+
+        .policy-info input {
+            width: 60%;
+            padding: 5px;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 1px solid #c01e1b;
+            background: transparent;
+            color: black;
+        }
+
+        .policy-info input:focus {
+            outline: none;
+            border-bottom: 1px solid #c01e1b;
+        }
+
+        .image {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            transform: scaleY(0.9);
+
+
+        }
+
+        .image-text {
+            text-align: left;
+            padding: 20px;
+            color: black;
+            font-size: 9px;
+            font-weight: 800;
+            transform: scaleY(1.3);
+
+        }
+        .footer {
+      background-color: #c01e1b; 
+      padding: 15px; 
+      text-align: center;
+    }
+
+    .footer a {
+      margin: 0 10px; 
+    }
+
+    .footer img {
+      width: 30px;
+      height: 30px;
+    }
+        
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="190mm" height="30mm" viewBox="0 0 1208 208" fill="none" style="margin-left: -10mm;">
+        <g filter="url(#filter0_d_501_10)">
+            <path d="M4 0H1204L810.167 176.409C783.932 188.161 770.814 194.036 756.864 197.018C742.913 200 728.539 200 699.793 200H4V0Z" fill="#CF3535"/>
+            <path d="M4.5 0.5H1201.66L809.962 175.953C783.709 187.713 770.646 193.561 756.759 196.529C742.872 199.497 728.56 199.5 699.793 199.5H4.5V0.5Z" stroke="black"/>
+        </g>
+        <defs>
+            <filter id="filter0_d_501_10" x="0" y="0" width="1208" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_501_10"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_501_10" result="shape"/>
+            </filter>
+        </defs>
+    
+        <!-- Visible Text -->
+        <text x="20" y="70%" dominant-baseline="middle" text-anchor="start" fill="#fff" font-family="Helvetica" font-size="33" font-weight="900">
+            Certificate of Coverage
+        </text>
+    </svg>
+    
+    
+    
+    
+    
+      
+    <div class="body">
+        <div class="heading">Your Policy Information</div>
+        <div class="container2">
+            <div class="policy-info">
+                <label for="coveragePeriod">Coverage Period:</label>
+                <input type="text" id="coveragePeriod" name="coveragePeriod">
+            </div>
+
+            <div class="policy-info">
+                <label for="insuredName">Insured Name:</label>
+                <input type="text" id="insuredName" name="insuredName">
+            </div>
+
+            <div class="policy-info">
+                <label for="memberId">Member I.D Number:</label>
+                <input type="text" id="memberId" name="memberId">
+            </div>
+
+            <div class="policy-info">
+                <label for="beneficiaryNo">Beneficiary No.:</label>
+                <input type="text" id="beneficiaryNo" name="beneficiaryNo">
+            </div>
+        </div>
+        <div class="heading">Your Benefits</div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Accidental Death and Disability Benefit</div>
+                <p class="para">100% of your benefit amount is given to your families in case of your death. In case of
+                    disability
+                    caused by an accident, you will receive a percentage of your benefit amount to help pay for your
+                    medical treatment, daily expenses, and etc.
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 100,000
+                </p>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Double Indemnity Benefit​</div>
+                <p class="para">Get double of your benefit in case of physical injury due to a burning facility, riding
+                    in an elevator and/or travelling as a fare paying passenger of a licensed public utility vehicle. ​
+                </p>
+            </div>
+            <div>
+                <p class="para2">
+                </p>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Unprovoked Murder and Assault Benefit (On top of Group Personal Accident)</div>
+                <p class="para">The benefit amount is given to you or your families in the event of disability or death
+                    caused by a robbery, hold-up, assault or other criminal offence. ​
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 50,000
+                </p>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Total Permanent Disability Benefit​</div>
+                <p class="para">You will receive lump-sum benefit amount in case of total permanent disability caused by
+                    an injury or sickness. This disability has made them unable to do any work and earn money for at
+                    least six (6) months. You will receive their benefits in installments. This will help you pay for
+                    your medical treatment, daily expenses and etc. ​
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 100,000
+                </p>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Daily Hospital Income Benefit​</div>
+                <p class="para">In case of hospital confinement, benefit amount is given to you for your daily financial
+                    support. This is provided up 14 days, for each day of hospital confinement.​
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 100,000
+                </p>
+            </div>
+        </div>
+
+        <div class="container3">
+            <div class="image">
+                <img src="Desktop.svg" alt="Desktop Image" />
+                <div class="image-text">
+                    <p style="font-weight: 900;">File your life or living benefit claims anytime, anywhere.<br>
+                        Visit <a href="www.generali.com.ph/claims-filing/" target="_blank"
+                            style="color: #c01e1b;">www.generali.com.ph/claims-filing/</a> to access our Online Claims
+                        Form.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container3">
+            <div>
+                <div class="heading2">Emergency Care Benefit 
+
+                </div>
+                <p class="para">Financial support is provided to you for medical expenses due to an emergency. This aids in paying for your treatment, emergency room use, laboratory tests and prescribed medicines. ​
+                </p>
+                <p style="font-weight: 800; font-size:10px; color: black;">Go to any Generali - accredited hospital provider nationwide and present this product flier and./ or confirmation of coverage and valid government ID. You may view the list of accredited providers at <span style="color: #c01e1b;">www.generali.com.ph</span>
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 100,000
+                </p>
+            </div>
+        </div>
+        
+
+        <div class="container3">
+            <div>
+                <div class="heading2">24/7 Call - A - Doc Benefit
+                </div>
+                <p class="para">You can talk* to a doctor anytime, anywhere they may need it with zero charges on your
+                    health benefit limit. 24/7 Call - A -Doc is available via our GenConnect mobile application.
+                    Download GenConnect now! Type ‘GenConnect PH’ on Google Play or AppStore.
+                    ​
+                </p>
+            </div>
+            <div>
+                <p class="para2">Php 100,000
+                </p>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="image">
+                <img src="Mobile.svg" alt="Desktop Image" />
+                <div class="image-text">
+                    <d>No access to a mobile app? You may still consult via the 24/7 Call–A–Doc numbers below:<br><br>
+
+                        (632) 8373.0002<br>
+                        0961.3334311 | 0968.8987488 (SMART)<br>
+                        0917.6277294 | 0917.6501510 (GLOBE)<br>
+
+                        *For non-emergency cases only
+                    </d>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- Social Media Icons -->
+
+
+        <a href="www.generali.com.ph" style="position: absolute; left: 2px; bottom: 2px; color: white; text-decoration: none; " target="_blank">www.generali.com.ph
+        </a>
+       
+        
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="facebook.svg" alt="Facebook Icon">
+        </a>
+    
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="instagram.svg" alt="Instagram Icon">
+        </a>
+    
+        <a href="https://www.youtube.com/" target="_blank">
+          <img src="youtube.svg" alt="YouTube Icon">
+        </a>
+    
+        <a href="https://www.linkedin.com/" target="_blank">
+          <img src="linkedin.svg" alt="LinkedIn Icon">
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" style="position: absolute; right: 0; bottom: 0; padding-top:15px;">
+            <img src="FooterLogo.svg" alt="YouTube Icon">
+        </a>
+
+       
+       
+    </div>
+</body>
+
+</html>
