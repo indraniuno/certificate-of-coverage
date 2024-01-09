@@ -14,60 +14,15 @@
         }
 
         body {
-            width: 210mm;
-            /* A4 width */
-            /* height: 290mm; */
-            /* A4 height */
+            width: 100%;
+			margin-top:1px;
+           
             font-family: 'Helvetica Neue', sans-serif;
             color: white;
             transform: scaleY(1.1);
-            /* display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto auto auto auto auto auto auto;
-            grid-template-areas:
-                "heading"
-                "container2"
-                "heading2"
-                "container3"
-                "image"
-                "container3"
-                "container3"
-                "container3"
-                "container3"; */
-
         }
 
-        .rhombus-container {
-            margin: 0;
-            position: relative;
-            width: 50%;
-            height: 35vh;
-            overflow: hidden;
-        }
-
-        .skew-wrapper {
-            width: 100%;
-            height: 100%;
-            transform: skew(0, 345deg);
-            overflow: hidden;
-        }
-
-        .rhombus {
-            width: 200%;
-            height: 100%;
-            background-color: #c01e1b;
-            border-bottom-right-radius: 50%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            text-align: center;
-            color: #fff;
-            line-height: 100vh;
-            font-family: Helvetica Neue LT;
-            font-size: 18px;
-            font-weight: bold;
-            transform: skew(0, 15deg);
-        }
+     
 
         .heading {
             grid-area: heading;
@@ -117,8 +72,7 @@
         }
 
         .policy-info {
-            display: inline-block;;
-            /* margin-top: 1px; */
+            display: inline-block;           
             width: 40%;
             font-family: Helvetica Neue LT;
 
@@ -204,7 +158,7 @@
 </head>
 
 <body>
-    <svg width="566" margin-top="50px" margin-bottom="20px" height="130" viewBox="0 0 566 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg  margin-top="1px" margin-bottom="1px" height="110px" viewBox="0 0 566 73" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_512_27)">
         <path d="M566 0H0V73H566V0Z" fill="white"/>
         <path d="M1 4C1 2.89543 1.89543 2 3 2H453C454.105 2 455 2.89543 455 4V70C455 71.1046 454.105 72 453 72H2.99999C1.89542 72 1 71.1046 1 70V4Z" fill="#C01E1B"/>
@@ -224,7 +178,7 @@
         
     
     
-    <div class="heading" style="margin-top: -30px;">Your Policy Information</div>
+    <div class="heading" style="margin-top: 1px;">Your Policy Information</div>
     <div class="container2">
         <div class="policy-info">
             <label for="coveragePeriod">Coverage Period:</label>
